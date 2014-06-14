@@ -1,0 +1,15 @@
+  #!/bin/bash
+file=Prueba.txt
+  tput sc
+  while [ -s $pass ] || [ $pass '!=' $pass2 ]; do 
+   read -s -p "Enter Passphrase: " pass;
+   tput rc;
+   read -s -p "Re-Enter Passphrase: " pass2;
+   tput el1;
+   tput rc;
+  done;
+
+ 
+   tar -cf - $file | gpg -c --cipher-algo AES256 --passphrase $pass> $file.gpg;
+                                                  
+   rm $file;

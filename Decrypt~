@@ -1,0 +1,8 @@
+#!/bin/bash
+
+file=ArchivoF.txt.gpg
+	
+	gpgp -d $file
+	
+echo Listo !;
+   
